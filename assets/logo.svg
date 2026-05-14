@@ -1,0 +1,20 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Intern Skill Logo</title>
+  <desc id="desc">A friendly cartoon intern holding a project map.</desc>
+  <rect width="512" height="512" rx="112" fill="#F8FAFC"/>
+  <circle cx="382" cy="116" r="54" fill="#DFF7EA"/>
+  <circle cx="118" cy="388" r="66" fill="#E7F0FF"/>
+  <path d="M132 356c22-74 77-116 139-116 63 0 115 43 132 116 7 31-16 60-48 60H181c-33 0-58-29-49-60Z" fill="#2563EB"/>
+  <path d="M178 260c-7-42 18-91 80-102 72-12 120 35 111 101-7 52-45 92-96 92-50 0-87-38-95-91Z" fill="#FFD7B5"/>
+  <path d="M175 244c7-66 44-104 105-104 58 0 96 39 96 99-23-2-49-14-66-37-20 25-75 42-135 42Z" fill="#1F2937"/>
+  <circle cx="226" cy="266" r="8" fill="#111827"/>
+  <circle cx="319" cy="266" r="8" fill="#111827"/>
+  <path d="M251 302c15 13 33 13 47 0" fill="none" stroke="#B45309" stroke-width="9" stroke-linecap="round"/>
+  <path d="M153 355h238v92H153z" fill="#FFFFFF" stroke="#1E40AF" stroke-width="10" rx="18"/>
+  <path d="M189 388h120M189 418h82" stroke="#2563EB" stroke-width="13" stroke-linecap="round"/>
+  <path d="M338 382l25 25 50-56" fill="none" stroke="#16A34A" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M154 119h94c17 0 31 14 31 31v42H154c-17 0-31-14-31-31v-11c0-17 14-31 31-31Z" fill="#FFFFFF" stroke="#94A3B8" stroke-width="10"/>
+  <path d="M151 149h88" stroke="#64748B" stroke-width="12" stroke-linecap="round"/>
+  <path d="M397 210h-70c-15 0-27 12-27 27v31h97c15 0 27-12 27-27v-4c0-15-12-27-27-27Z" fill="#FFFFFF" stroke="#94A3B8" stroke-width="10"/>
+  <path d="M329 239h59" stroke="#64748B" stroke-width="12" stroke-linecap="round"/>
+</svg>

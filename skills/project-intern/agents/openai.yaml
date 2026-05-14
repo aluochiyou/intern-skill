@@ -1,4 +1,4 @@
 interface:
-  display_name: "Project Intern"
+  display_name: "Intern Skill"
   short_description: "Learn, bootstrap, audit, and improve open-source projects."
   default_prompt: "Use this skill to onboard into a GitHub or local project, map the main code path, explain modules for interview-ready learning, evaluate external papers or projects for transferable ideas, and plan tests, monitoring, or audits."

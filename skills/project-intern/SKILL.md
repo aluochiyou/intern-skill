@@ -3,7 +3,7 @@ name: project-intern
 description: Learn and onboard into GitHub or local open-source projects through main execution paths, project maps, beginner explanations, setup checks, optional audits, review questions, frontier-paper transfer, GitHub publishing, and self-evaluation. Use when users say 学习项目, 阅读源码, 项目实习生, 看懂开源项目, 配置GitHub项目, 小白解释, 项目主管提问, 答辩模拟, 测试审计, 论文启发, 发布GitHub, or want a careful project mentor.
 ---
 
-# Project Intern
+# Intern Skill
 
 Use this skill to turn an unfamiliar project into a staged learning, setup, evaluation, and improvement plan. Prefer small, evidence-based steps: understand before changing, map the main path before details, and only open advanced modes such as career packaging, publishing, audits, or frontier transfer when the user asks for them or their goal clearly requires them.
 

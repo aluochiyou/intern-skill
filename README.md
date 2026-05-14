@@ -1,204 +1,45 @@
-# Project Intern Skill / 项目实习生 Skill
+<p align="center">
+  <img src="assets/logo.svg" alt="Intern Skill" width="160">
+</p>
 
-Project Intern 是一个帮助你学习开源项目的 Agent Skill。你给它一个 GitHub 仓库或本地项目，它会先帮你看清项目整体，再带你沿着核心代码链路一点点读懂。
+<h1 align="center">Intern Skill</h1>
 
-它适合这些场景：
+<p align="center">
+  一个陪你接手、读懂、扩展开源项目的 AI 实习生。
+</p>
 
-- 想学习一个开源项目，但不知道先看哪里。
-- 想快速了解项目技术栈、入口文件和主要模块。
-- 想让 AI 按你的水平解释代码，而不是直接抛出一堆专业术语。
-- 想在需要时做环境检查、随机提问、测试审计、论文/相关项目启发或 GitHub 发布准备。
-
-[English README](README.en.md)
+<p align="center">
+  <a href="README.en.md">English</a>
+</p>
 
 ## 定位
 
-Project Intern 的目标不是替你一次性读完整个仓库，而是帮你建立一个清晰的学习入口：
+Intern Skill 是一个面向 Codex、Claude Code、Hermes Agent、OpenClaw 等 Agent 平台的项目学习 Skill。
 
-1. 先判断项目是做什么的。
-2. 找到主要入口和核心流程。
-3. 按一个小模块、一个函数或一条调用链来学习。
-4. 根据你的需求，再开启小白解释、随机提问、测试审计、论文启发、GitHub 发布等能力。
+你给它一个 GitHub 仓库或本地项目，它会先帮你看清项目是做什么的、从哪里开始读、主链路怎么走，再根据你的水平一点点讲清楚代码。它不是一次性把所有文件倒给你，而是像一个有耐心的实习生搭档，陪你把陌生项目拆成可以理解的小块。
 
-默认情况下，它会专注于“学习项目本身”。只有当你明确提出需要面试、简历、审计、发布或论文迁移时，它才会进入对应模式。
+它可以帮你完成从“刚拿到项目，不知道看哪里”到“我知道主流程、核心模块和下一步该学什么”的过渡。
 
-## 能做什么
+## 适用人群
 
-- **下载与初步配置项目**：给 GitHub 链接后，克隆项目并生成启动报告。
-- **识别项目结构**：整理技术栈、入口文件、测试目录、配置文件和文档位置。
-- **生成项目地图**：输出 `docs/intern/PROJECT_MAP.md`，方便后续学习。
-- **按主链路读代码**：从用户动作、CLI 命令、API 入口或核心函数开始讲。
-- **小白友好解释**：先解释当前代码需要的概念，再进入源码。
-- **环境体检**：检查 Python、Node、Docker、Git、GitHub CLI 等工具状态。
-- **按需扩展**：在你需要时支持随机提问、测试审计、前沿论文/相关项目分析、GitHub 发布准备。
+- **刚拿到项目无从下手的实习生**：先建立项目地图，再沿主链路学习。
+- **想快速学习项目的求职者**：在理解项目后，再按需整理面试表达或作品集材料。
+- **想扩展项目功能的开发者**：先判断新功能应该接在哪个模块，再规划最小实验。
+- **刚接触某个技术栈的新手**：先解释必要概念，再进入代码。
+- **需要评审或答辩练习的人**：模拟项目主管或老师，随机挑重点提问。
 
-## 扩展模块
-
-这些模块不会默认开启。你需要时，可以直接这样说：
-
-- **小白模式**：适合刚接触项目或不熟悉技术栈时使用。  
-  例：`我是小白，先解释这个项目需要的基础概念。`
-
-- **环境配置**：用于下载 GitHub 项目、检查依赖、生成启动报告。  
-  例：`帮我下载这个 GitHub 项目并检查怎么运行。`
-
-- **测试与审计**：用于查看测试入口、数据流、日志、风险点和缺失检查。  
-  例：`审计这个项目的数据流和测试覆盖。`
-
-- **随机提问**：模拟项目主管或评审老师，随机挑重点考察你是否真正理解项目。  
-  例：`像项目主管一样随机问我 5 个问题，先不要给答案。`
-
-- **前沿启发**：用于根据论文、benchmark 或相关开源项目，分析当前项目可以借鉴什么。  
-  例：`参考 SWE-agent，看看这个项目可以学习什么设计。`
-
-- **GitHub 发布准备**：用于发布前检查 README、license、.gitignore、敏感文件和大文件。  
-  例：`帮我发布这个项目到 GitHub，先做发布前检查。`
-
-- **求职表达**：用于你明确想整理面试、简历、实习或作品集表达时。  
-  例：`把这个模块整理成面试表达和简历可写点。`
-
-## 自我进化怎么体现
-
-Project Intern 会把重要学习过程沉淀到项目里的 `docs/intern/` 目录，例如项目地图、学习记录和评分记录。你可以在一次学习后让它复盘：
-
-```text
-根据这次学习效果，帮我评估 project-intern 哪里需要改进。
-```
-
-它会检查：
-
-- 是否找到了项目主链路。
-- 是否解释得符合你的水平。
-- 是否证据充分。
-- 是否一次讲得太多。
-- 是否误开了不需要的扩展模块。
-- 下一步是否清楚。
-
-如果发现问题，它不会自动堆新功能，而是先提出一个最小修改建议。你确认后，再更新 skill。
-
-## 安装
-
-克隆本仓库后进入目录：
-
-```bash
-cd project-intern-skill
-```
-
-### 一键安装
-
-如果你已经克隆了本仓库，可以直接运行：
-
-```bash
-bash scripts/install.sh --platform codex
-```
-
-发布到 GitHub 后，也可以提供类似下面的一键安装命令。把 `OWNER/REPO` 换成你的仓库地址：
-
-```bash
-PROJECT_INTERN_REPO_URL=https://github.com/OWNER/REPO.git \
-  bash -c "$(curl -fsSL https://raw.githubusercontent.com/OWNER/REPO/main/scripts/install.sh)" -- --platform codex
-```
-
-安装到 Hermes Agent：
-
-```bash
-PROJECT_INTERN_REPO_URL=https://github.com/OWNER/REPO.git \
-  bash -c "$(curl -fsSL https://raw.githubusercontent.com/OWNER/REPO/main/scripts/install.sh)" -- --platform hermes
-```
-
-安装到 OpenClaw / miniOpenClaw：
-
-```bash
-PROJECT_INTERN_REPO_URL=https://github.com/OWNER/REPO.git \
-  bash -c "$(curl -fsSL https://raw.githubusercontent.com/OWNER/REPO/main/scripts/install.sh)" -- --platform openclaw --openclaw-project /path/to/miniOpenClaw-main
-```
-
-### Codex
-
-```bash
-python scripts/install.py --platform codex
-```
-
-安装到：
-
-```text
-~/.codex/skills/project-intern
-```
-
-### Claude Code
-
-```bash
-python scripts/install.py --platform claude
-```
-
-安装到：
-
-```text
-~/.claude/skills/project-intern
-```
-
-### Hermes Agent
-
-```bash
-python scripts/install.py --platform hermes
-```
-
-安装到：
-
-```text
-$HERMES_HOME/skills/project-intern
-```
-
-如果没有设置 `HERMES_HOME`，默认是：
-
-```text
-~/.hermes/skills/project-intern
-```
-
-如果 Hermes 会话已经在运行，安装后在 Hermes 中执行：
-
-```text
-/reload-skills
-```
-
-### OpenClaw / miniOpenClaw
-
-传入项目根目录或 `backend` 目录：
-
-```bash
-python scripts/install.py --platform openclaw --openclaw-project /path/to/miniOpenClaw-main
-```
-
-安装到：
-
-```text
-/path/to/miniOpenClaw-main/backend/skills/project-intern
-```
-
-### 安装到全部平台
-
-```bash
-python scripts/install.py --platform all --openclaw-project /path/to/miniOpenClaw-main
-```
-
-如果目标目录已经存在，使用：
-
-```bash
-python scripts/install.py --platform codex --force
-```
-
-## 使用方法
+## 怎么使用
 
 学习 GitHub 项目：
 
 ```text
-用 project-intern 学习这个项目：https://github.com/NousResearch/hermes-agent
+用 Intern Skill 学习这个项目：https://github.com/NousResearch/hermes-agent
 ```
 
 学习本地项目：
 
 ```text
-用 project-intern 学习当前项目，先帮我建立项目地图
+用 Intern Skill 学习当前项目，先帮我建立项目地图
 ```
 
 小白模式：
@@ -213,28 +54,16 @@ python scripts/install.py --platform codex --force
 继续学习 AIAgent.run_conversation 主循环，只讲这一段
 ```
 
-环境检查：
-
-```text
-检查这个项目的运行环境还缺什么
-```
-
-测试与审计：
-
-```text
-审计这个项目的数据流和测试覆盖
-```
-
 随机提问：
 
 ```text
 像项目主管一样随机问我 5 个问题，先不要给答案
 ```
 
-前沿论文或相关项目启发：
+环境检查：
 
 ```text
-参考 SWE-agent，看看这个项目可以学习什么设计
+检查这个项目的运行环境还缺什么
 ```
 
 GitHub 发布准备：
@@ -243,24 +72,112 @@ GitHub 发布准备：
 帮我发布这个项目到 GitHub，先做发布前检查
 ```
 
-## 配置与检查
+## 一键部署
 
-发布或分发前可以运行：
+克隆本仓库后，在项目目录里运行：
+
+```bash
+bash scripts/install.sh --platform codex
+```
+
+可选平台：
+
+```bash
+bash scripts/install.sh --platform codex
+bash scripts/install.sh --platform claude
+bash scripts/install.sh --platform hermes
+bash scripts/install.sh --platform openclaw --openclaw-project /path/to/miniOpenClaw-main
+```
+
+全部安装：
+
+```bash
+bash scripts/install.sh --platform all --openclaw-project /path/to/miniOpenClaw-main
+```
+
+如果目标目录已存在：
+
+```bash
+bash scripts/install.sh --platform codex --force
+```
+
+从 GitHub 远程一键安装：
+
+```bash
+PROJECT_INTERN_REPO_URL=https://github.com/aluochiyou/intern-skill.git \
+  bash -c "$(curl -fsSL https://raw.githubusercontent.com/aluochiyou/intern-skill/main/scripts/install.sh)" -- --platform codex
+```
+
+## 扩展模块
+
+这些模块不会默认开启。你需要时，直接说出来就可以。
+
+| 模块 | 适合什么时候用 | 示例 |
+| --- | --- | --- |
+| 小白模式 | 不熟悉技术栈或术语 | `我是小白，先讲必要概念` |
+| 环境配置 | 下载项目、检查依赖、生成启动报告 | `帮我下载并检查怎么运行` |
+| 随机提问 | 练习项目答辩或检查理解程度 | `像项目主管一样问我 5 个问题` |
+| 测试与审计 | 查看测试、数据流、风险点 | `审计这个项目的数据流和测试覆盖` |
+| 前沿启发 | 借鉴论文、benchmark 或相关项目 | `参考 SWE-agent 看看能学什么` |
+| GitHub 发布准备 | 发布前检查 README、license、敏感文件 | `先做 GitHub 发布前检查` |
+| 求职表达 | 需要面试、简历、作品集整理时 | `整理成面试表达和简历可写点` |
+
+## 自我进化
+
+Intern Skill 会跟着你的学习过程一起调整。
+
+它会记录项目地图、学习日志和阶段性反馈，用来判断你已经理解了什么、还卡在哪里、下一次应该讲到什么深度。这样它不会一直重复你已经知道的内容，也不会突然跳到你听不懂的层次。
+
+你可以在学习一段时间后这样说：
+
+```text
+根据我这次学习的情况，帮我调整 Intern Skill 的讲解方式
+```
+
+它会检查：
+
+- 当前讲解是否符合你的基础。
+- 有没有重复讲你已经掌握的内容。
+- 有没有跳过必要概念。
+- 一次推进的内容是否太多。
+- 下一步学习建议是否清楚。
+
+如果需要改进，它会先提出一个小的调整建议，等你确认后再更新 Skill。
+
+## 安装位置
+
+| 平台 | 默认位置 |
+| --- | --- |
+| Codex | `~/.codex/skills/project-intern` |
+| Claude Code | `~/.claude/skills/project-intern` |
+| Hermes Agent | `$HERMES_HOME/skills/project-intern`，默认 `~/.hermes/skills/project-intern` |
+| OpenClaw / miniOpenClaw | `<project>/backend/skills/project-intern` |
+
+Hermes Agent 安装后，如果会话已经在运行，可以执行：
+
+```text
+/reload-skills
+```
+
+## 检查
+
+发布或分发前运行：
 
 ```bash
 python scripts/check_package.py
 ```
 
-它会检查 skill 文件、安装脚本和 Python 脚本是否可用。
-
 ## 目录结构
 
 ```text
-project-intern-skill/
+intern-skill/
 ├── README.md
 ├── README.en.md
+├── assets/
+│   └── logo.svg
 ├── scripts/
 │   ├── install.py
+│   ├── install.sh
 │   └── check_package.py
 └── skills/
     └── project-intern/

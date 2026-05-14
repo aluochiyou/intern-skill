@@ -1,95 +1,39 @@
-# Project Intern Skill
+<p align="center">
+  <img src="assets/logo.svg" alt="Intern Skill" width="160">
+</p>
 
-Project Intern is an Agent Skill for learning open-source projects. Give it a GitHub repository or a local project, and it helps you understand the project step by step: what it does, where to start, which files matter, and how the main code path works.
+<h1 align="center">Intern Skill</h1>
 
-It is useful when you want to:
+<p align="center">
+  An AI intern that helps you onboard, understand, and extend open-source projects.
+</p>
 
-- Learn an unfamiliar open-source project.
-- Find the main entrypoints, modules, tests, and configuration.
-- Get explanations that match your current level.
-- Check environment setup before running a project.
-- Practice with random supervisor-style review questions.
-- Optionally audit tests, study related papers/projects, or prepare a GitHub release.
+## What It Is
 
-## Positioning
+Intern Skill is a project-learning Agent Skill for Codex, Claude Code, Hermes Agent, OpenClaw, and other SKILL.md-compatible agents.
 
-Project Intern focuses on project learning first. It starts with the project map and the main execution path, then moves through one small module, function, or concept at a time.
+Give it a GitHub repository or a local project. It helps you understand what the project does, where to start, how the main execution path works, and what to learn next.
 
-Optional modes such as interview/resume framing, audit, publishing, and frontier research are used only when you ask for them.
+## Who It Is For
 
-It can also run a review-question mode where it acts like a project supervisor and asks focused questions about the project before showing reference answers.
+- Interns who just received a project and do not know where to start.
+- Job seekers who want to learn a project quickly before presenting it.
+- Developers who want to extend an existing project safely.
+- Beginners who need concept explanations before reading code.
+- Learners who want supervisor-style review questions.
 
-## Installation
-
-Clone this repository, then run:
-
-```bash
-cd project-intern-skill
-```
-
-One-command local install:
-
-```bash
-bash scripts/install.sh --platform codex
-```
-
-After publishing this repository to GitHub, replace `OWNER/REPO` with your repo:
-
-```bash
-PROJECT_INTERN_REPO_URL=https://github.com/OWNER/REPO.git \
-  bash -c "$(curl -fsSL https://raw.githubusercontent.com/OWNER/REPO/main/scripts/install.sh)" -- --platform codex
-```
-
-Codex:
-
-```bash
-python scripts/install.py --platform codex
-```
-
-Claude Code:
-
-```bash
-python scripts/install.py --platform claude
-```
-
-Hermes Agent:
-
-```bash
-python scripts/install.py --platform hermes
-```
-
-Hermes installs to `$HERMES_HOME/skills/project-intern`, defaulting to `~/.hermes/skills/project-intern`. If Hermes is already running, use:
-
-```text
-/reload-skills
-```
-
-OpenClaw / miniOpenClaw:
-
-```bash
-python scripts/install.py --platform openclaw --openclaw-project /path/to/miniOpenClaw-main
-```
-
-Install to all supported targets:
-
-```bash
-python scripts/install.py --platform all --openclaw-project /path/to/miniOpenClaw-main
-```
-
-Use `--force` to replace an existing installation.
-
-## Usage
+## How To Use
 
 Learn a GitHub project:
 
 ```text
-Use project-intern to learn this project: https://github.com/NousResearch/hermes-agent
+Use Intern Skill to learn this project: https://github.com/NousResearch/hermes-agent
 ```
 
 Learn a local project:
 
 ```text
-Use project-intern to learn the current project. Start with a project map.
+Use Intern Skill to learn the current project. Start with a project map.
 ```
 
 Beginner mode:
@@ -98,10 +42,10 @@ Beginner mode:
 I am a beginner. Explain tool calls, memory, and skills before reading the code.
 ```
 
-Continue with one module:
+Review questions:
 
 ```text
-Continue learning only the AIAgent.run_conversation loop.
+Act like a project supervisor and ask me 5 questions. Do not show answers yet.
 ```
 
 Environment check:
@@ -110,50 +54,77 @@ Environment check:
 Check what is missing before this project can run.
 ```
 
-Audit:
-
-```text
-Audit this project’s data flow and test coverage.
-```
-
-Random review questions:
-
-```text
-Act like a project supervisor and ask me 5 random questions. Do not show answers yet.
-```
-
-Related research or project:
-
-```text
-Compare this project with SWE-agent and suggest what can be learned.
-```
-
 GitHub publishing:
 
 ```text
 Prepare this project for GitHub publishing. Start with a publish readiness check.
 ```
 
-## Package Check
+## One-Command Install
+
+After cloning this repository:
+
+```bash
+bash scripts/install.sh --platform codex
+```
+
+Supported platforms:
+
+```bash
+bash scripts/install.sh --platform codex
+bash scripts/install.sh --platform claude
+bash scripts/install.sh --platform hermes
+bash scripts/install.sh --platform openclaw --openclaw-project /path/to/miniOpenClaw-main
+```
+
+Install to all targets:
+
+```bash
+bash scripts/install.sh --platform all --openclaw-project /path/to/miniOpenClaw-main
+```
+
+Remote install after publishing to GitHub:
+
+```bash
+PROJECT_INTERN_REPO_URL=https://github.com/aluochiyou/intern-skill.git \
+  bash -c "$(curl -fsSL https://raw.githubusercontent.com/aluochiyou/intern-skill/main/scripts/install.sh)" -- --platform codex
+```
+
+## Modules
+
+| Module | Use When |
+| --- | --- |
+| Beginner Mode | You need prerequisite concepts first |
+| Setup | You need to clone a repo or check how it runs |
+| Review Questions | You want supervisor-style questions |
+| Audit | You want tests, data flow, logs, and risks reviewed |
+| Frontier Inspiration | You want to compare with papers or related projects |
+| GitHub Publishing | You want a publish readiness check |
+| Career Framing | You explicitly need resume, interview, or portfolio wording |
+
+## Adaptive Learning
+
+Intern Skill can keep project maps, learning logs, and feedback under `docs/intern/`. This helps it match your current level: it can avoid repeating what you already know and avoid jumping into explanations that are too advanced.
+
+You can say:
+
+```text
+Review my learning progress and adjust how Intern Skill explains this project.
+```
+
+## Install Locations
+
+| Platform | Default Location |
+| --- | --- |
+| Codex | `~/.codex/skills/project-intern` |
+| Claude Code | `~/.claude/skills/project-intern` |
+| Hermes Agent | `$HERMES_HOME/skills/project-intern`, default `~/.hermes/skills/project-intern` |
+| OpenClaw / miniOpenClaw | `<project>/backend/skills/project-intern` |
+
+## Check
 
 ```bash
 python scripts/check_package.py
-```
-
-## Structure
-
-```text
-project-intern-skill/
-├── README.md
-├── README.en.md
-├── scripts/
-│   ├── install.py
-│   └── check_package.py
-└── skills/
-    └── project-intern/
-        ├── SKILL.md
-        ├── references/
-        └── scripts/
 ```
 
 ## License
