@@ -1,6 +1,6 @@
 ---
 name: project-intern
-description: Learn and onboard into GitHub or local open-source projects through main execution paths, project maps, beginner explanations, setup checks, optional audits, review questions, frontier technology radar, GitHub publishing, and self-evaluation. Use when users say 学习项目, 阅读源码, 项目实习生, 看懂开源项目, 配置GitHub项目, 小白解释, 项目主管提问, 答辩模拟, 测试审计, 前沿技术调研, 论文启发, 发布GitHub, or want a careful project mentor.
+description: Learn and onboard into GitHub or local open-source projects through main execution paths, project maps, beginner explanations, setup checks, optional audit intern, intern supervisor questions, research intern frontier study, GitHub publishing, and adaptive self-evaluation. Use when users say 学习项目, 阅读源码, 项目实习生, 看懂开源项目, 配置GitHub项目, 小白解释, 调研实习生, 实习生主管, 答辩模拟, 测试审计, 前沿技术调研, 论文启发, 发布GitHub, or want a careful project mentor.
 ---
 
 # Intern Skill
@@ -31,13 +31,13 @@ Choose the smallest matching workflow:
 - **Beginner learning support**: Use "Beginner Foundation" before project learning.
 - **Publish a local project to GitHub**: Use "Publish To GitHub".
 - **Learning a local project**: Use "Project Learning".
-- **Research a project technical point for recent papers, benchmarks, or related projects**: Use "Frontier Technology Radar".
+- **Research a project technical point for recent papers, benchmarks, or related projects**: Use "Research Intern".
 - **Testing, monitoring, security, data flow, or reliability question**: Use "Audit And Evaluation".
-- **Random supervisor or review-teacher questions**: Use "Review Questions".
+- **Random supervisor or review-teacher questions**: Use "Intern Supervisor".
 - **Improve this skill from usage feedback**: Use "Self Evaluation And Improvement".
 - **Resume or interview preparation**: Use "Career Packaging".
 
-Default to setup, beginner foundation if needed, project map, and main path learning. Add audit, frontier radar, review questions, GitHub publishing, or career packaging only when the user asks for that mode or the task cannot be completed without it. When multiple modes are clearly requested, run them in this order: setup, beginner foundation, project map, main path learning, audit, frontier radar, review questions, GitHub publishing, career packaging, self evaluation.
+Default to setup, beginner foundation if needed, project map, and main path learning. Add audit intern, research intern, intern supervisor, GitHub publishing, or career packaging only when the user asks for that mode or the task cannot be completed without it. When multiple modes are clearly requested, run them in this order: setup, beginner foundation, project map, main path learning, audit intern, research intern, intern supervisor, GitHub publishing, career packaging, self evaluation.
 
 ## Bootstrap And Setup
 
@@ -107,9 +107,9 @@ If career packaging is requested, append:
 9. Interview Expression
 10. Resume Candidate Points And Ownership Boundary
 
-## Frontier Technology Radar
+## Research Intern
 
-Use this when the user wants to analyze a project or one project technical point, research recent/frontier related papers, benchmarks, tools, or open-source projects, and judge whether they are truly valuable for the current project. Also use when the user imports a paper, advanced article, benchmark, or related open-source project, or only gives the name of a frontier paper, method, benchmark, model, tool, or repository and asks what the current project can learn.
+调研实习生 is the main extension mode for frontier learning. Use it when the user wants to analyze a project or one project technical point, research recent/frontier related papers, benchmarks, tools, or open-source projects, and judge whether they are truly valuable for the current project. Also use it when the user imports a paper, advanced article, benchmark, or related open-source project, or only gives the name of a frontier paper, method, benchmark, model, tool, or repository and asks what the current project can learn.
 
 Follow [references/paper-to-feature.md](references/paper-to-feature.md):
 
@@ -139,7 +139,7 @@ Audit sequence:
 6. Recommend the smallest useful checks: unit test, integration test, fixture, regression case, metric, trace event, or log.
 7. Explain how the audit improves project quality. Include job-facing expression only when career packaging is active.
 
-## Review Questions
+## Intern Supervisor
 
 Use this when the user wants random questioning, project defense practice, supervisor-style review, code reading checks, or teacher-style oral exam questions.
 
@@ -147,9 +147,10 @@ Follow [references/review-questions.md](references/review-questions.md):
 
 1. Use existing project evidence first: README, project map, entrypoints, tests, and the module currently being learned.
 2. Run `scripts/generate_review_questions.py <repo>` when a project map or general question set is useful.
-3. Ask 3-7 questions at a time, mixing basic understanding, main path, engineering tradeoffs, risk, and extension thinking.
-4. Do not reveal full model answers immediately unless the user asks. Give hints first, then provide reference answers after the user responds or asks for them.
-5. Adjust difficulty to the user's level. For beginners, ask concept and main-path questions; for advanced users, ask design, tradeoff, failure, and evaluation questions.
+3. When the host allows a fresh-context or independent reviewer pass, prefer it for supervisor questions so session memory does not over-focus on previously studied modules. If that is not available, explicitly sample from the full project map, entrypoints, tests, docs, and unexplored modules.
+4. Ask 3-7 questions at a time, mixing basic understanding, main path, unexplored-area checks, engineering tradeoffs, risk, and extension thinking.
+5. Do not reveal full model answers immediately unless the user asks. Give hints first, then provide reference answers after the user responds or asks for them.
+6. Adjust difficulty to the user's level. For beginners, ask concept and main-path questions; for advanced users, ask design, tradeoff, failure, and evaluation questions.
 
 ## Self Evaluation And Improvement
 

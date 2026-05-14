@@ -5,14 +5,16 @@
 <h1 align="center">Intern Skill</h1>
 
 <p align="center">
-  An AI intern that helps you onboard, understand, and extend open-source projects.
+  An AI intern that helps you onboard, understand, research, and extend open-source projects.
 </p>
 
 ## What It Is
 
-Intern Skill is a project-learning Agent Skill for Codex, Claude Code, Hermes Agent, OpenClaw, and other SKILL.md-compatible agents.
+Intern Skill is a project onboarding, source-reading, and technical research Agent Skill for Codex, Claude Code, Hermes Agent, OpenClaw, and other SKILL.md-compatible agents.
 
-Give it a GitHub repository or a local project. It helps you understand what the project does, where to start, how the main execution path works, and what to learn next.
+Give it a GitHub repository or a local project. It identifies the stack, entrypoints, dependency setup, core modules, data flow, and main execution path, then teaches the project in small steps that match your current level.
+
+Its job is not only to explain code. It organizes project onboarding, setup diagnosis, main-path tracing, frontier research, audit, and publishing preparation into a reusable learning workflow.
 
 ## Who It Is For
 
@@ -36,31 +38,31 @@ Learn a local project:
 Use Intern Skill to learn the current project. Start with a project map.
 ```
 
-Beginner mode:
+Beginner Intern:
 
 ```text
 I am a beginner. Explain tool calls, memory, and skills before reading the code.
 ```
 
-Review questions:
+Intern Supervisor:
 
 ```text
 Act like a project supervisor and ask me 5 questions. Do not show answers yet.
 ```
 
-Environment check:
+Setup Intern:
 
 ```text
 Check what is missing before this project can run.
 ```
 
-GitHub publishing:
+Publishing Intern:
 
 ```text
 Prepare this project for GitHub publishing. Start with a publish readiness check.
 ```
 
-Frontier radar:
+Research Intern:
 
 ```text
 Analyze this project, pick one technical point worth researching, and find the latest related projects and papers.
@@ -96,21 +98,23 @@ PROJECT_INTERN_REPO_URL=https://github.com/aluochiyou/intern-skill.git \
   bash -c "$(curl -fsSL https://raw.githubusercontent.com/aluochiyou/intern-skill/main/scripts/install.sh)" -- --platform codex
 ```
 
-## Modules
+## Extension Interns
 
 | Module | Use When |
 | --- | --- |
-| Beginner Mode | You need prerequisite concepts first |
-| Setup | You need to clone a repo or check how it runs |
-| Review Questions | You want supervisor-style questions |
-| Audit | You want tests, data flow, logs, and risks reviewed |
-| Frontier Radar | You want to extract a technical point, research recent projects/papers/benchmarks, and judge whether they are useful |
-| GitHub Publishing | You want a publish readiness check |
-| Career Framing | You explicitly need resume, interview, or portfolio wording |
+| **Research Intern** | The most important extension. Extract a technical point from the project, research recent papers/projects/benchmarks/tools, and judge what is truly worth transferring |
+| **Beginner Intern** | You need prerequisite concepts first |
+| **Setup Intern** | You need to clone a repo or check how it runs |
+| **Audit Intern** | You want tests, data flow, logs, and risks reviewed |
+| **Intern Supervisor** | You want supervisor-style questions, including checks on unexplored areas |
+| **Publishing Intern** | You want a publish readiness check |
+| **Career Intern** | You explicitly need resume, interview, or portfolio wording |
 
-## Adaptive Learning
+The Intern Supervisor should use an independent review angle when possible, so it does not only ask about recently discussed modules. This helps uncover unreviewed entrypoints, commands, data flows, and risks.
 
-Intern Skill can keep project maps, learning logs, and feedback under `docs/intern/`. This helps it match your current level: it can avoid repeating what you already know and avoid jumping into explanations that are too advanced.
+## Adaptive Growth
+
+Intern Skill grows like a real intern. It can keep project maps, learning logs, feedback, and evaluation notes under `docs/intern/`, then use them to match your current level. It avoids repeating what you already know and avoids jumping into explanations that are too advanced.
 
 You can say:
 
