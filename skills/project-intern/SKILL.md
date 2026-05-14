@@ -1,6 +1,6 @@
 ---
 name: project-intern
-description: Learn and onboard into GitHub or local open-source projects through project navigation, main execution paths, beginner foundations, environment setup, quality audit, project review questions, technology research, GitHub publishing, and adaptive self-evaluation. Use when users say intern-skill, 学习项目, 阅读源码, 项目实习生, 项目导航实习生, 基础助教实习生, 环境配置实习生, 技术调研实习生, 项目评审主管, 测试审计, 前沿技术调研, 论文启发, 发布GitHub, or want a careful project mentor.
+description: Learn and onboard into GitHub or local open-source projects through project navigation, main execution paths, beginner tutoring, setup checks, audit, review questions, frontier research, GitHub publishing, and adaptive self-evaluation. Use when users say intern-skill, 学习项目, 阅读源码, 导航实习生, 助教实习生, 配置实习生, 调研实习生, 审计实习生, 评审主管, 测试审计, 前沿技术调研, 论文启发, 发布GitHub, or want a careful project mentor.
 ---
 
 # intern-skill
@@ -32,9 +32,9 @@ Choose the smallest matching workflow:
 - **Beginner learning support**: Use "Beginner Foundation" before project learning.
 - **Publish a local project to GitHub**: Use "Publish To GitHub".
 - **Learning a local project**: Use "Project Learning".
-- **Research a project technical point for recent papers, benchmarks, or related projects**: Use "Technology Research Intern".
+- **Research a project technical point for recent papers, benchmarks, or related projects**: Use "Research Intern".
 - **Testing, monitoring, security, data flow, or reliability question**: Use "Audit And Evaluation".
-- **Random supervisor or review-teacher questions**: Use "Project Review Lead".
+- **Random supervisor or review-teacher questions**: Use "Review Lead".
 - **Improve this skill from usage feedback**: Use "Self Evaluation And Improvement".
 - **Resume or interview preparation**: Use "Career Packaging".
 
@@ -108,9 +108,9 @@ If career packaging is requested, append:
 9. Interview Expression
 10. Resume Candidate Points And Ownership Boundary
 
-## Technology Research Intern
+## Research Intern
 
-技术调研实习生 is the main extension mode for frontier learning. Use it when the user wants to analyze a project or one project technical point, research recent/frontier related papers, benchmarks, tools, or open-source projects, and judge whether they are truly valuable for the current project. Also use it when the user imports a paper, advanced article, benchmark, or related open-source project, or only gives the name of a frontier paper, method, benchmark, model, tool, or repository and asks what the current project can learn.
+调研实习生 is the main extension mode for frontier learning. Use it when the user wants to analyze a project or one project technical point, research recent/frontier related papers, benchmarks, tools, or open-source projects, and judge whether they are truly valuable for the current project. Also use it when the user imports a paper, advanced article, benchmark, or related open-source project, or only gives the name of a frontier paper, method, benchmark, model, tool, or repository and asks what the current project can learn.
 
 Follow [references/paper-to-feature.md](references/paper-to-feature.md):
 
@@ -140,7 +140,7 @@ Audit sequence:
 6. Recommend the smallest useful checks: unit test, integration test, fixture, regression case, metric, trace event, or log.
 7. Explain how the audit improves project quality. Include job-facing expression only when career packaging is active.
 
-## Project Review Lead
+## Review Lead
 
 Use this when the user wants random questioning, project defense practice, supervisor-style review, code reading checks, or teacher-style oral exam questions.
 

@@ -86,7 +86,7 @@ def main() -> int:
     rng.shuffle(questions)
     selected = questions[: max(1, min(args.count, len(questions)))]
 
-    print("# 项目评审主管随机提问")
+    print("# 评审主管随机提问")
     print()
     print(f"项目：`{repo}`")
     print()

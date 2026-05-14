@@ -5,7 +5,7 @@
 <h1 align="center">intern-skill</h1>
 
 <p align="center">
-  An AI intern that helps you onboard, understand, research, and extend open-source projects.
+  An AI intern that helps you onboard, understand, research, and extend open-source projects while growing with you.
 </p>
 
 ## What It Is
@@ -16,16 +16,11 @@ Give it a GitHub repository or a local project. It identifies the stack, entrypo
 
 Its job is not only to explain code. It organizes project onboarding, setup diagnosis, main-path tracing, frontier research, audit, and publishing preparation into a reusable learning workflow.
 
-It is organized as a set of on-demand intern roles:
+It is organized as a set of on-demand roles: **Navigator, Tutor, Setup, Research, Audit, Review, Release, Career**. By default, the Navigator builds the project map and learning path first; other roles are activated only when your goal needs them.
 
-- **Project Navigator Intern**: builds the project map, main paths, module priorities, and recommended learning order.
-- **Foundation Tutor Intern**: explains prerequisite terms and minimal mental models when the user is new to the stack.
-- **Environment Setup Intern**: clones projects, detects dependencies, checks launch commands, and writes setup reports.
-- **Technology Research Intern**: extracts technical points, researches recent papers, repositories, benchmarks, and tools, then judges transfer value.
-- **Quality Audit Intern**: reviews tests, data flow, logs, monitoring, failure modes, and reliability risks.
-- **Project Review Lead**: asks independent supervisor-style questions across both learned and unexplored areas.
-- **Release Prep Intern**: checks README, license, secrets, large files, remotes, and installation notes before GitHub publishing.
-- **Career Narrative Intern**: only activates when users explicitly need resume, interview, or portfolio wording.
+It grows with you. As you learn, intern-skill can sync with your current understanding: it says less about what you already know, fills in missing foundations first, and keeps pushing the next module when you are ready.
+
+It also connects your project to frontier movement. The Research Intern extracts technical points from your codebase, checks recent papers, open-source projects, benchmarks, tools, and engineering practices, then separates useful signal from hype. Valuable ideas are mapped back into your modules as small experiments, feature inspiration, or refactoring proposals.
 
 ## Who It Is For
 
@@ -49,31 +44,31 @@ Learn a local project:
 Use intern-skill to learn the current project. Start with a project map and give me the next learning steps.
 ```
 
-Foundation Tutor Intern:
+Tutor Intern:
 
 ```text
 I am a beginner. Explain tool calls, memory, and skills before reading the code.
 ```
 
-Project Review Lead:
+Review Lead:
 
 ```text
 Act like a project supervisor and ask me 5 questions. Do not show answers yet.
 ```
 
-Environment Setup Intern:
+Setup Intern:
 
 ```text
 Check what is missing before this project can run.
 ```
 
-Release Prep Intern:
+Release Intern:
 
 ```text
 Prepare this project for GitHub publishing. Start with a publish readiness check.
 ```
 
-Technology Research Intern:
+Research Intern:
 
 ```text
 Analyze this project, pick one technical point worth researching, and find the latest related projects and papers.
@@ -113,16 +108,16 @@ PROJECT_INTERN_REPO_URL=https://github.com/aluochiyou/intern-skill.git \
 
 | Module | Use When |
 | --- | --- |
-| **Technology Research Intern** | The most important extension. Extract a technical point from the project, research recent papers/projects/benchmarks/tools, and judge what is truly worth transferring |
-| **Project Navigator Intern** | You need a project map, main path, and learning order |
-| **Foundation Tutor Intern** | You need prerequisite concepts first |
-| **Environment Setup Intern** | You need to clone a repo or check how it runs |
-| **Quality Audit Intern** | You want tests, data flow, logs, and risks reviewed |
-| **Project Review Lead** | You want supervisor-style questions, including checks on unexplored areas |
-| **Release Prep Intern** | You want a publish readiness check |
-| **Career Narrative Intern** | You explicitly need resume, interview, or portfolio wording |
+| **Research Intern** | The most important extension. Extract a technical point from the project, research recent papers/projects/benchmarks/tools, and judge what is truly worth transferring |
+| **Navigator Intern** | You need a project map, main path, and learning order |
+| **Tutor Intern** | You need prerequisite concepts first |
+| **Setup Intern** | You need to clone a repo or check how it runs |
+| **Audit Intern** | You want tests, data flow, logs, and risks reviewed |
+| **Review Lead** | You want supervisor-style questions, including checks on unexplored areas |
+| **Release Intern** | You want a publish readiness check |
+| **Career Intern** | You explicitly need resume, interview, or portfolio wording |
 
-The Project Review Lead should use an independent review angle when possible, so it does not only ask about recently discussed modules. This helps uncover unreviewed entrypoints, commands, data flows, and risks.
+The Review Lead should use an independent review angle when possible, so it does not only ask about recently discussed modules. This helps uncover unreviewed entrypoints, commands, data flows, and risks.
 
 ## Adaptive Growth
 

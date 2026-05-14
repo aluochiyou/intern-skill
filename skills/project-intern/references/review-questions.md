@@ -1,6 +1,6 @@
-# Project Review Lead
+# Review Lead
 
-Use this mode when the user wants to be questioned about a project. 中文可称为“项目评审主管”：像项目主管或评审老师一样抽查理解程度、设计判断和未覆盖区域。
+Use this mode when the user wants to be questioned about a project. 中文可称为“评审主管”：像项目主管或评审老师一样抽查理解程度、设计判断和未覆盖区域。
 
 ## Role
 
