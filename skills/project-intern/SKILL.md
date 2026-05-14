@@ -1,6 +1,6 @@
 ---
 name: project-intern
-description: Learn and onboard into GitHub or local open-source projects through main execution paths, project maps, beginner explanations, setup checks, optional audits, review questions, frontier-paper transfer, GitHub publishing, and self-evaluation. Use when users say 学习项目, 阅读源码, 项目实习生, 看懂开源项目, 配置GitHub项目, 小白解释, 项目主管提问, 答辩模拟, 测试审计, 论文启发, 发布GitHub, or want a careful project mentor.
+description: Learn and onboard into GitHub or local open-source projects through main execution paths, project maps, beginner explanations, setup checks, optional audits, review questions, frontier technology radar, GitHub publishing, and self-evaluation. Use when users say 学习项目, 阅读源码, 项目实习生, 看懂开源项目, 配置GitHub项目, 小白解释, 项目主管提问, 答辩模拟, 测试审计, 前沿技术调研, 论文启发, 发布GitHub, or want a careful project mentor.
 ---
 
 # Intern Skill
@@ -31,13 +31,13 @@ Choose the smallest matching workflow:
 - **Beginner learning support**: Use "Beginner Foundation" before project learning.
 - **Publish a local project to GitHub**: Use "Publish To GitHub".
 - **Learning a local project**: Use "Project Learning".
-- **Paper, article, or related repo comparison**: Use "External Insight Transfer".
+- **Research a project technical point for recent papers, benchmarks, or related projects**: Use "Frontier Technology Radar".
 - **Testing, monitoring, security, data flow, or reliability question**: Use "Audit And Evaluation".
 - **Random supervisor or review-teacher questions**: Use "Review Questions".
 - **Improve this skill from usage feedback**: Use "Self Evaluation And Improvement".
 - **Resume or interview preparation**: Use "Career Packaging".
 
-Default to setup, beginner foundation if needed, project map, and main path learning. Add audit, external insight, review questions, GitHub publishing, or career packaging only when the user asks for that mode or the task cannot be completed without it. When multiple modes are clearly requested, run them in this order: setup, beginner foundation, project map, main path learning, audit, external insight, review questions, GitHub publishing, career packaging, self evaluation.
+Default to setup, beginner foundation if needed, project map, and main path learning. Add audit, frontier radar, review questions, GitHub publishing, or career packaging only when the user asks for that mode or the task cannot be completed without it. When multiple modes are clearly requested, run them in this order: setup, beginner foundation, project map, main path learning, audit, frontier radar, review questions, GitHub publishing, career packaging, self evaluation.
 
 ## Bootstrap And Setup
 
@@ -88,7 +88,7 @@ Default learning sequence:
 3. Main execution path: user action or CLI command through frontend/API/core/storage/output.
 4. One focused module: explain what it is, where it sits, why it exists, how it connects.
 5. Engineering value: design tradeoffs, reliability, observability, extensibility, evaluation value.
-6. Optional mode-specific add-on: audit, external insight, GitHub publishing, or career packaging only when requested.
+6. Optional mode-specific add-on: audit, frontier radar, GitHub publishing, or career packaging only when requested.
 7. Next steps: 1-3 concrete actions, preferably continuing along the call chain.
 
 Use this default learning output when teaching a module unless the user asks for a shorter answer:
@@ -107,20 +107,21 @@ If career packaging is requested, append:
 9. Interview Expression
 10. Resume Candidate Points And Ownership Boundary
 
-## External Insight Transfer
+## Frontier Technology Radar
 
-Use this when the user imports a paper, advanced article, benchmark, or related open-source project, or only gives the name of a frontier paper, method, benchmark, model, tool, or repository and asks what the current project can learn.
+Use this when the user wants to analyze a project or one project technical point, research recent/frontier related papers, benchmarks, tools, or open-source projects, and judge whether they are truly valuable for the current project. Also use when the user imports a paper, advanced article, benchmark, or related open-source project, or only gives the name of a frontier paper, method, benchmark, model, tool, or repository and asks what the current project can learn.
 
 Follow [references/paper-to-feature.md](references/paper-to-feature.md):
 
-1. If only a name is provided, browse the web to find primary sources first: official paper page, arXiv/OpenReview/ACL Anthology, official GitHub repository, project page, docs, and benchmark page.
-2. Prefer the latest authoritative version. Record source URLs and dates when the result may have changed.
-3. Download or inspect accessible papers, READMEs, docs, and code only as needed for the user's project.
-4. Summarize the external source's core method, assumptions, required dependencies, and measurable claims.
-5. Map the idea to current project modules using code, document, or web evidence.
-6. Separate transferable ideas from ideas that are out of scope.
-7. Propose 1-3 small experiments before any broad rewrite.
-8. For each idea, state implementation cost, risk, expected value, and evaluation method. Include resume/interview value only when career packaging is active.
+1. If the user has not chosen a technical point, run `scripts/extract_tech_points.py <repo>` or inspect the project map to propose candidate technical points.
+2. Pick one point with the user, or choose the most central point when the user asks you to decide.
+3. Browse the web for current primary sources: official paper page, arXiv/OpenReview/ACL Anthology, official GitHub repository, project page, docs, benchmark page, and release notes.
+4. Prefer latest authoritative versions and record source URLs and dates when recency matters.
+5. Summarize each source's core method, assumptions, dependencies, evidence, and limitations.
+6. Judge whether it is truly useful, not just popular: fit to this project, implementation cost, maturity, risks, evaluation path, and smallest experiment.
+7. Map valuable ideas to current project modules using code, document, or web evidence.
+8. Propose 1-3 small experiments before any broad rewrite.
+9. Include resume/interview value only when career packaging is active.
 
 Prefer proposals, prototypes, or experiment plans before editing core logic.
 
@@ -185,7 +186,7 @@ Adapt explanations to the user's target direction:
 
 - [references/learning-route.md](references/learning-route.md): Project reading route and module explanation rules.
 - [references/beginner-foundation.md](references/beginner-foundation.md): Beginner-friendly prerequisite and vocabulary explanation patterns.
-- [references/paper-to-feature.md](references/paper-to-feature.md): Transfer external papers or projects into feature ideas.
+- [references/paper-to-feature.md](references/paper-to-feature.md): Research frontier project techniques and transfer external papers or projects into feature ideas.
 - [references/audit-checklist.md](references/audit-checklist.md): Testing, monitoring, data flow, and reliability audit.
 - [references/review-questions.md](references/review-questions.md): Supervisor-style and review-teacher project questions.
 - [references/github-publish.md](references/github-publish.md): Publish local projects to GitHub with safety checks.
@@ -196,6 +197,7 @@ Adapt explanations to the user's target direction:
 - `scripts/bootstrap_github_project.py`: Deterministic clone, detect, setup-plan, and optional dependency-install script for GitHub projects.
 - `scripts/doctor.py`: Environment readiness and tool availability scanner.
 - `scripts/build_project_map.py`: Deterministic project map generator.
+- `scripts/extract_tech_points.py`: Extract candidate technical points from a project for frontier research.
 - `scripts/generate_review_questions.py`: Generate supervisor-style project review questions from local project evidence.
 - `scripts/github_publish_plan.py`: Dry-run publisher readiness scanner and command planner.
 - `scripts/log_session.py`: Append structured project-intern usage logs.

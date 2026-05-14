@@ -60,6 +60,12 @@ GitHub publishing:
 Prepare this project for GitHub publishing. Start with a publish readiness check.
 ```
 
+Frontier radar:
+
+```text
+Analyze this project, pick one technical point worth researching, and find the latest related projects and papers.
+```
+
 ## One-Command Install
 
 After cloning this repository:
@@ -98,7 +104,7 @@ PROJECT_INTERN_REPO_URL=https://github.com/aluochiyou/intern-skill.git \
 | Setup | You need to clone a repo or check how it runs |
 | Review Questions | You want supervisor-style questions |
 | Audit | You want tests, data flow, logs, and risks reviewed |
-| Frontier Inspiration | You want to compare with papers or related projects |
+| Frontier Radar | You want to extract a technical point, research recent projects/papers/benchmarks, and judge whether they are useful |
 | GitHub Publishing | You want a publish readiness check |
 | Career Framing | You explicitly need resume, interview, or portfolio wording |
 
