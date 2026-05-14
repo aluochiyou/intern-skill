@@ -40,6 +40,8 @@ Learning Priority:
 Next 1-3 Steps:
 ```
 
+Prefer filling `Next 1-3 Steps` with a concrete recommendation. Avoid ending the first project map with a generic question such as "What do you want to learn next?"
+
 ## Setup Report
 
 ```text

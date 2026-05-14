@@ -1,9 +1,9 @@
 ---
 name: project-intern
-description: Learn and onboard into GitHub or local open-source projects through main execution paths, project maps, beginner explanations, setup checks, optional audit intern, intern supervisor questions, research intern frontier study, GitHub publishing, and adaptive self-evaluation. Use when users say 学习项目, 阅读源码, 项目实习生, 看懂开源项目, 配置GitHub项目, 小白解释, 调研实习生, 实习生主管, 答辩模拟, 测试审计, 前沿技术调研, 论文启发, 发布GitHub, or want a careful project mentor.
+description: Learn and onboard into GitHub or local open-source projects through project navigation, main execution paths, beginner foundations, environment setup, quality audit, project review questions, technology research, GitHub publishing, and adaptive self-evaluation. Use when users say intern-skill, 学习项目, 阅读源码, 项目实习生, 项目导航实习生, 基础助教实习生, 环境配置实习生, 技术调研实习生, 项目评审主管, 测试审计, 前沿技术调研, 论文启发, 发布GitHub, or want a careful project mentor.
 ---
 
-# Intern Skill
+# intern-skill
 
 Use this skill to turn an unfamiliar project into a staged learning, setup, evaluation, and improvement plan. Prefer small, evidence-based steps: understand before changing, map the main path before details, and only open advanced modes such as career packaging, publishing, audits, or frontier transfer when the user asks for them or their goal clearly requires them.
 
@@ -22,6 +22,7 @@ Use this skill to turn an unfamiliar project into a staged learning, setup, eval
 9. Mark conclusions as code evidence, document evidence, command evidence, web evidence, or inference.
 10. Before large edits, state which files would change, why, expected effect, and whether it helps the user's portfolio.
 11. For destructive, deployment, credential, or production-impacting actions, stop and ask first.
+12. Once project learning starts, do not end by asking the user where to begin unless evidence is missing. Make a reasonable choice, explain why, and give 1-3 concrete next learning steps.
 
 ## Workflow Decision
 
@@ -31,13 +32,13 @@ Choose the smallest matching workflow:
 - **Beginner learning support**: Use "Beginner Foundation" before project learning.
 - **Publish a local project to GitHub**: Use "Publish To GitHub".
 - **Learning a local project**: Use "Project Learning".
-- **Research a project technical point for recent papers, benchmarks, or related projects**: Use "Research Intern".
+- **Research a project technical point for recent papers, benchmarks, or related projects**: Use "Technology Research Intern".
 - **Testing, monitoring, security, data flow, or reliability question**: Use "Audit And Evaluation".
-- **Random supervisor or review-teacher questions**: Use "Intern Supervisor".
+- **Random supervisor or review-teacher questions**: Use "Project Review Lead".
 - **Improve this skill from usage feedback**: Use "Self Evaluation And Improvement".
 - **Resume or interview preparation**: Use "Career Packaging".
 
-Default to setup, beginner foundation if needed, project map, and main path learning. Add audit intern, research intern, intern supervisor, GitHub publishing, or career packaging only when the user asks for that mode or the task cannot be completed without it. When multiple modes are clearly requested, run them in this order: setup, beginner foundation, project map, main path learning, audit intern, research intern, intern supervisor, GitHub publishing, career packaging, self evaluation.
+Default to environment setup, beginner foundation if needed, project navigation, and main path learning. Add quality audit, technology research, project review, GitHub publishing, or career packaging only when the user asks for that mode or the task cannot be completed without it. When multiple modes are clearly requested, run them in this order: setup, beginner foundation, project map, main path learning, audit, research, review, GitHub publishing, career packaging, self evaluation.
 
 ## Bootstrap And Setup
 
@@ -88,7 +89,7 @@ Default learning sequence:
 3. Main execution path: user action or CLI command through frontend/API/core/storage/output.
 4. One focused module: explain what it is, where it sits, why it exists, how it connects.
 5. Engineering value: design tradeoffs, reliability, observability, extensibility, evaluation value.
-6. Optional mode-specific add-on: audit, frontier radar, GitHub publishing, or career packaging only when requested.
+6. Optional mode-specific add-on: audit, technology research, GitHub publishing, or career packaging only when requested.
 7. Next steps: 1-3 concrete actions, preferably continuing along the call chain.
 
 Use this default learning output when teaching a module unless the user asks for a shorter answer:
@@ -107,9 +108,9 @@ If career packaging is requested, append:
 9. Interview Expression
 10. Resume Candidate Points And Ownership Boundary
 
-## Research Intern
+## Technology Research Intern
 
-调研实习生 is the main extension mode for frontier learning. Use it when the user wants to analyze a project or one project technical point, research recent/frontier related papers, benchmarks, tools, or open-source projects, and judge whether they are truly valuable for the current project. Also use it when the user imports a paper, advanced article, benchmark, or related open-source project, or only gives the name of a frontier paper, method, benchmark, model, tool, or repository and asks what the current project can learn.
+技术调研实习生 is the main extension mode for frontier learning. Use it when the user wants to analyze a project or one project technical point, research recent/frontier related papers, benchmarks, tools, or open-source projects, and judge whether they are truly valuable for the current project. Also use it when the user imports a paper, advanced article, benchmark, or related open-source project, or only gives the name of a frontier paper, method, benchmark, model, tool, or repository and asks what the current project can learn.
 
 Follow [references/paper-to-feature.md](references/paper-to-feature.md):
 
@@ -139,7 +140,7 @@ Audit sequence:
 6. Recommend the smallest useful checks: unit test, integration test, fixture, regression case, metric, trace event, or log.
 7. Explain how the audit improves project quality. Include job-facing expression only when career packaging is active.
 
-## Intern Supervisor
+## Project Review Lead
 
 Use this when the user wants random questioning, project defense practice, supervisor-style review, code reading checks, or teacher-style oral exam questions.
 
@@ -187,7 +188,7 @@ Adapt explanations to the user's target direction:
 
 - [references/learning-route.md](references/learning-route.md): Project reading route and module explanation rules.
 - [references/beginner-foundation.md](references/beginner-foundation.md): Beginner-friendly prerequisite and vocabulary explanation patterns.
-- [references/paper-to-feature.md](references/paper-to-feature.md): Research frontier project techniques and transfer external papers or projects into feature ideas.
+- [references/paper-to-feature.md](references/paper-to-feature.md): Technology research workflow for transferring external papers or projects into feature ideas.
 - [references/audit-checklist.md](references/audit-checklist.md): Testing, monitoring, data flow, and reliability audit.
 - [references/review-questions.md](references/review-questions.md): Supervisor-style and review-teacher project questions.
 - [references/github-publish.md](references/github-publish.md): Publish local projects to GitHub with safety checks.

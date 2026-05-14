@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Install Project Intern Skill into Codex, Claude Code, Hermes Agent, or OpenClaw."""
+"""Install intern-skill into Codex, Claude Code, Hermes Agent, or OpenClaw."""
 
 from __future__ import annotations
 

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Run lightweight publish checks for Project Intern Skill."""
+"""Run lightweight publish checks for intern-skill."""
 
 from __future__ import annotations
 

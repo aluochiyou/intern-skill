@@ -118,3 +118,5 @@ Useful comparisons:
 ## Pace
 
 Prefer one small unit per response. Good units include one endpoint, one command, one class, one state object, one database table, one event type, or one test path.
+
+After learning has started, end with recommended next steps instead of asking the user to choose from scratch. Only ask a question when the next step depends on unavailable information, user credentials, destructive actions, or a genuine goal conflict.

@@ -1,8 +1,8 @@
-# Research Intern
+# Technology Research Intern
 
 Use this when comparing an external paper, benchmark, product, or related repository with the current project. Also use it when the user asks to analyze the current project, pick a technical point, and research the latest related projects, papers, methods, benchmarks, and tools.
 
-中文可称为“调研实习生”。This is the most important extension mode: it turns project learning into project evolution by finding serious outside ideas, filtering hype, and mapping only useful techniques back to the current codebase.
+中文可称为“技术调研实习生”。This is the most important extension mode: it turns project learning into project evolution by finding serious outside ideas, filtering hype, and mapping only useful techniques back to the current codebase.
 
 ## Technical Point Selection
 
